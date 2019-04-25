@@ -11,10 +11,10 @@ def dfs(g, start='S', end='G'):
     while len(frontier) > 0:
 
         source = stack[len(stack) - 1]
-        print(source + "->", end="")
+       
 
         frontier = g.edges[source[0]]
-        print(frontier)
+        print(source + "->" + "{0}".format(frontier))
         stack.remove(source[0])
 
         if frontier is not None:
@@ -24,4 +24,4 @@ def dfs(g, start='S', end='G'):
                     visited.append(node)
                     stack.append(node[0])
 
-        frontier = stack
+ 
