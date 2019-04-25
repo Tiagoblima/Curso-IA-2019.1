@@ -7,9 +7,9 @@ def bfs(g, start='S', end='G'):
 
     for source in queue:
 
-        print(source + "->", end="")
         frontier = g.edges[source]
-        print(frontier)
+         print(source + "->" + "{0}".format(frontier))
+        if len(frontier) == 0: break
 
         if frontier is not None:
             for node in frontier:
