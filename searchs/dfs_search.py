@@ -11,9 +11,7 @@ def dfs(g, start='S', end='G'):
     while not stack.is_empty():
 
         source = stack.pop()
-
         frontier = g.edges[source[0]]
-        print(frontier)
 
         if frontier is None:
 
