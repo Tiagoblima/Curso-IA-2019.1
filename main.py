@@ -1,14 +1,6 @@
-from collections import defaultdict
-import dfs_search
-import bfs_search
+from searchs import bfs_search, dfs_search
 
-
-class Graph():
-    def __init__(self, start, end):
-        self.edges = defaultdict(list)
-
-    def add_edge(self, source, destination, cost):
-        self.edges[source].append((destination, cost))
+from search_util import Graph
 
 
 g = Graph(start='S', end='G')
@@ -25,9 +17,10 @@ g.add_edge('D', 'G', 4)
 
 
 print("---------------------BFS------------------------")
-bfs_search.bfs(g)
-
+result = bfs_search.bfs(g)
+print(result)
 
 print("---------------------DFS------------------------")
-dfs_search.dfs(g)
+result = dfs_search.dfs(g)
+print(result)
 
