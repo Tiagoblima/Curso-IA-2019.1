@@ -28,7 +28,7 @@ def bfs(g, start='S', end='G'):
         for node in frontier:
             if node not in visited:
                 parent[node[0]] = source
-                visited.append(node)
+                visited.append(node[0])
                 queue.push(node)
 
     # for node in visited:

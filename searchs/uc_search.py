@@ -25,6 +25,6 @@ def bfs(g, start='S', end='G'):
 
         if frontier is not None:
             for node in frontier:
-                if node[0] not in visited:
+                if node not in visited:
                     visited.append(node[0])
                     queue.push(node[0], node[2])
